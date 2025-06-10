@@ -24,6 +24,7 @@ import torch.optim as optim
 from torchvision import transforms
 from torchvision.utils import save_image
 from torch.utils.data import Dataset, DataLoader
+import torchvision.models as models
 from PIL import Image
 import numpy as np
 
@@ -228,7 +229,7 @@ def normal_init(m, mean, std):
         m.weight.data.normal_(mean, std)
         m.bias.data.zero_()
 
-import torchvision.models as models
+
 
 
 class VGGPerceptualLoss(nn.Module):
